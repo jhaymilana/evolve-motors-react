@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './style/index.css';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
 
 function App() {
+  let title = 'eVolve Motors';
+  let link = 'Products';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <Header title={title} link={link}/>
+      <main>
+      <div className="container">
+        <Banner />
+      </div>
+      <Gallery />
+      </main>
+      <Footer />
+    </body>
   );
 }
 

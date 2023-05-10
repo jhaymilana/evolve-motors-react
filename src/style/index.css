@@ -1,0 +1,228 @@
+@import url(./reset.css);
+
+body {
+  background-color: var(--app-bg-dark);
+  height: 100%;
+}
+
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Variables
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+:root {
+  --app-bg-dark: #1a1c24;
+  --app-header-footer: #111114;
+  --app-content-bg: #0f1015;
+  --app-shadow: #050506;
+  --app-blue: #257afd;
+  --app-blue-hover: #025fed;
+  --app-green: #93bc3f;
+  --app-white: #fff;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Header
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background-color: var(--app-header-footer);
+  font-size: 0px;
+  height: 56px;
+  line-height: 56px;
+  box-shadow: 3px 4px 4px var(--app-shadow);
+}
+
+.flexbox h1 {
+  line-height: 56px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-green);
+  font-family: 'Bruno Ace';
+}
+
+.flexbox p {
+  line-height: 56px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-white);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Main
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.grid {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+  height: calc(100vh - 56px);
+  display: grid;
+  grid-template-columns: repeat(5, 18.5%);
+  grid-template-rows: repeat(3, 32%);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+
+.item-1 {
+  display: block;
+  margin-top: 25px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.item-2 {
+  display: block;
+  margin-left: 50px;
+  padding: 10px;
+  color: var(--app-white);
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.item-2 h2 {
+  font-size: 35px;
+  font-family: 'Bruno Ace';
+}
+
+.item-2 p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #b3b3b3;
+}
+
+.item-3 {
+  display: block;
+  margin-left: 50px;
+  margin-right: 5px;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+img {
+  box-shadow: 3px 4px 4px var(--app-shadow);
+}
+
+.item-2 .center {
+  display: grid;
+  place-items: center;
+}
+
+.inputs{
+  display: flex;
+  margin-top: 35px;
+}
+
+button {
+  display: block;
+  height: 40px;
+  width: 150px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px var(--app-shadow);
+}
+
+.inputs button + button {
+  margin-left: 20px;
+}
+
+.first {
+  color: var(--app-white);
+  background-color: var(--app-green);
+}
+
+.second {
+  color: var(--app-green);
+  background-color: transparent;
+  border: solid 1px var(--app-green);
+}
+
+.gallery {
+  width: 100%;
+  height: 600px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--app-green);
+}
+
+.flex {
+  display: flex;
+}
+
+.product {
+  display: block;
+  width: 270px;
+  height: 480px;
+  padding: 30px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: var(--app-header-footer);
+  box-shadow: 3px 4px 4px var(--app-shadow);
+}
+
+.product + .product {
+  margin-left: 35px;
+}
+
+.product h3 {
+  margin-top: 15px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.product p {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #b3b3b3;
+}
+
+.product p + p {
+  margin-top: 50px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Footer
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+footer {
+  height: 60px;
+}
+
+footer h2 {
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-green);
+  font-family: 'Bruno Ace';
+}
+
+footer p {
+  line-height: 60px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-white);
+}
